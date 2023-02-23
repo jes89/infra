@@ -13,7 +13,7 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: "/api/es"
+        path: "/api/es/(.*)"
         backend:
           service:
             name: es
