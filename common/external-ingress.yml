@@ -17,6 +17,6 @@ spec:
         path: "/api/es/(.*)"
         backend:
           service:
-            name: es
+            name: helloworld
             port: 
               number: 8080
