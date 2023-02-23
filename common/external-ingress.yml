@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: es-ingress-external
+  annotation: 
+     nginx.ingress.kubenets.io/proxy-bodu-size : 50m
+     nginx.ingress.kubenets.io/rewrite-target: /$1
+  labels:
+    name: es-ingress-external
+spec:
+  ingressClassName : ingress-external
+  rules:
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/api/es"
+        backend:
+          service:
+            name: es
+            port: 
+              number: 8080
