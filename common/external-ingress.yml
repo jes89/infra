@@ -14,7 +14,7 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: "/api/es/(.*)"
+        path: "/api/helloworld/(.*)"
         backend:
           service:
             name: helloworld
