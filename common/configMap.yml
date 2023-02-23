@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: es-common
+data:
+  es.stock.name : es stock
+immutable: true
