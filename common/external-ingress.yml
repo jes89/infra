@@ -10,7 +10,7 @@ metadata:
 spec:
   ingressClassName : ingress-external
   rules:
-  - hot: www.es.com
+  - host: www.es.com
     http:
       paths:
       - pathType: Prefix
